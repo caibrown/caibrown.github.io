@@ -100,7 +100,6 @@
     <div class="viz-grid">
       <!-- Visualization 1 -->
       <div class="viz-card">
-        <h3>Visualization 1</h3>
         <iframe src="viz1.html"></iframe>
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     This interactive choropleth map shows the results of a cluster analysis on Bay Area traffic density data.
@@ -112,7 +111,6 @@
 
       <!-- Visualization 2 -->
       <div class="viz-card">
-        <h3>Visualization 2</h3>
         <img src="viz2.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     From a data science seminar series I gave colleagues. Helpful reminder of the differences between quantiles, CIs, SDs and SEs. 
@@ -130,32 +128,82 @@
 
       <!-- Visualization 3 -->
       <div class="viz-card">
-        <h3>Visualization 3</h3>
         <img src="viz3.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     Also from a data science seminar series I gave colleagues. Made in TikZ, an illustration of gradient descent. 
-          Function is $7xy/e^(x^2 + y^2)$; path calculated in Python.
+          Function is \(7xy/e^(x^2 + y^2)\); path calculated in Python.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz3.png" target="_blank">Open Full Screen</a>
         </p>
       </div>
 
-      
       <!-- Visualization 4 -->
       <div class="viz-card">
-        <h3>Visualization 4</h3>
         <img src="viz4.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     Data science seminar: thrice as nice! Also made in TikZ, and adapted from <i>The Elements of Statistical Learning</i> (excellent resource!)
           Constraint geometry of Ridge and lasso, variants of classic ordinary least squares linear regression.
           Blue areas are the constraint regions; purple ellipses are the contours of RSS (residual sum of squares) as it moves away from the minimum.
-          Note, if $\hat\beta$ fell within the constraint area, Then $\hat\beta_{OLS}$ would already satisfy the constraint; no need to shrink $\hat\beta$ further.
+          Note, if \(\hat\beta\) fell within the constraint area, Then \(\hat\beta_{OLS}\) would already satisfy the constraint; no need to shrink \(\hat\beta\) further.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz4.png" target="_blank">Open Full Screen</a>
         </p>
       </div>
+
+      <!-- Visualization 5 -->
+      <div class="viz-card">
+        <img src="viz5.png" style="width:100%; height:auto; border:1px solid #ccc;">
+        <p style="margin-top:5px; font-size:0.95em; color:#555;">
+    Fractals are shapes that don't have integer dimensions (fractional dimensions). Here is a fractal called a filled Julia set. 
+          The boundary and all points within (in red) converge rather than escaping to infinity.
+        </p>
+        <p style="text-align:center; margin-top:5px;">
+          <a href="viz5.png" target="_blank">Open Full Screen</a>
+        </p>
+      </div>
+
+      <!-- Visualization 6 -->
+      <div class="viz-card">
+        <img src="viz6.png" style="width:100%; height:auto; border:1px solid #ccc;">
+        <p style="margin-top:5px; font-size:0.95em; color:#555;">
+    Filled Julia set of \(z=0.36+0.1i\), colored by number of iterations required to diverge.
+        </p>
+        <p style="text-align:center; margin-top:5px;">
+          <a href="viz6.png" target="_blank">Open Full Screen</a>
+        </p>
+      </div>
+
+      <!-- Visualization 7 -->
+      <div class="viz-card">
+        <img src="viz7.png" style="width:100%; height:auto; border:1px solid #ccc;">
+        <p style="margin-top:5px; font-size:0.95em; color:#555;">
+    We all learned the quadratic method for finding roots of second-order polynomials. 
+          However, for higher-order or complex functions, iterative methods are required. For such methods, 
+          the closer an initial guess is to a root, the less iterations are required to converge. Pictured 
+          is Newton's Method on \(z^3-1\). The roots are found where the least amount of iterations are 
+          indicated (dark blue), agreeing with the known values of 
+          \((1,0i),(-0.5,\frac{\sqrt{3}}{2}i),(-0.5,-\frac{\sqrt{3}}{2}i)\).
+        </p>
+        <p style="text-align:center; margin-top:5px;">
+          <a href="viz7.png" target="_blank">Open Full Screen</a>
+        </p>
+      </div>
+
+      <!-- Visualization 8 -->
+      <div class="viz-card">
+        <img src="viz8.png" style="width:100%; height:auto; border:1px solid #ccc;">
+        <p style="margin-top:5px; font-size:0.95em; color:#555;">
+    The Mandelbrot Set! My favorite fractal and the reason I decided to study math. 
+          Well, that and reading the book <i>Chaos</i> by James Gleick. Was beyond stoked when I learned to
+          make this in good ol' MATLAB.
+        </p>
+        <p style="text-align:center; margin-top:5px;">
+          <a href="viz8.png" target="_blank">Open Full Screen</a>
+        </p>
+      </div>
+      
     </div>
   </div>
 </body>
