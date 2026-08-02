@@ -157,9 +157,8 @@
           the ways you could set the model's internal numbers, ranked by how well they fit the training data (the center 
           dot is the "best fit," and it gets worse the further out you go). Left untouched, the model would just pick the 
           absolute best fit and run with it. But we deliberately restrict it: the blue shape is a boundary the model's 
-          numbers aren't allowed to cross, forcing it to settle for a slightly-worse-but-safer fit inside the shape 
-          (marked with the arrow) instead of the unrestricted best fit. The shape of the 
-          boundary actually matters: because the diamond has sharp corners sitting right on the axes, the winning point 
+          numbers aren't allowed to cross, forcing it to settle for a slightly-worse-but-safer fit inside the shape.
+          And, the shape actually matters: because the diamond has sharp corners sitting right on the axes, the winning point 
           often lands exactly on a corner, meaning one of the model's numbers gets pushed to exactly zero, effectively 
           deciding that factor doesn't matter at all. The circle doesn't have corners, so it shrinks numbers down but 
           rarely zeroes them out completely.
@@ -177,7 +176,7 @@
           they don't have integer dimensions, but <i>fractional</i> ones. Regular shapes like circles and squares don't do this. 
           This one is called a filled Julia set. To make it, you take a point, run it through a simple repeating math rule, 
           and check what happens: does it wander off toward infinity, or does it stay trapped in a bounded region forever? 
-          The red points are the "trapped" ones. The wild, spiky boundary between red and blue is where the fractal 
+          The red points are the "trapped" ones. The wild, spiky boundary between red and white is where the fractal 
           detail lives. Zoom into that edge and you'll keep finding more detail <i>forever.</i>
         </p>
         <p style="text-align:center; margin-top:5px;">
