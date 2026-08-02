@@ -103,6 +103,8 @@
         <iframe src="viz1.html"></iframe>
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     This interactive choropleth map shows the results of a cluster analysis on Bay Area traffic density data.
+          Built for a project at LBNL supporting FHWA policy and resource allocation for EV charging.
+          Made in RStudio using Leaflet.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz1-full.html" target="_blank">Open Full Screen</a>
@@ -131,7 +133,13 @@
         <img src="viz3.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     Also from a data science seminar series I gave colleagues. Made in TikZ, an illustration of gradient descent. 
-          Function is \(7xy/e^{(x^2 + y^2)}\); path calculated in Python.
+          Function is \(7xy/e^{(x^2 + y^2)}\); path calculated in Python. This shows how a computer can find the 
+          lowest point of a bumpy landscape without being able to see the whole thing at once, like walking downhill 
+          in the fog, only feeling the slope right under your feet. At each step, it checks which direction is 
+          "downhill" from where it's standing and takes a step that way, then repeats. The red dots trace out the 
+          path it took, step by step, as it settles into a valley (the low point of the function). This is basically 
+          how machine learning models "learn." They're just walking downhill on some (much higher-dimensional) landscape, 
+          adjusting themselves a little at a time until they land somewhere good.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz3.png" target="_blank">Open Full Screen</a>
@@ -143,9 +151,18 @@
         <img src="viz4.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     Data science seminar: thrice as nice! Also made in TikZ, and adapted from <i>The Elements of Statistical Learning</i> (excellent resource!)
-          Constraint geometry of Ridge and lasso, variants of classic ordinary least squares linear regression.
-          Blue areas are the constraint regions; purple ellipses are the contours of RSS (residual sum of squares) as it moves away from the minimum.
-          Note, if \(\hat\beta\) fell within the constraint area, Then \(\hat\beta_{OLS}\) would already satisfy the constraint; no need to shrink \(\hat\beta\) further.
+          Constraint geometry of Ridge and lasso, variants of classic ordinary least squares (OLS) linear regression.
+          These are tricks used to keep prediction models from overfitting (that is, from getting so obsessed
+          with the exact data they were trained on that they stop working well on new data). The purple ovals show all 
+          the ways you could set the model's internal numbers, ranked by how well they fit the training data (the center 
+          dot is the "best fit," and it gets worse the further out you go). Left untouched, the model would just pick the 
+          absolute best fit and run with it. But we deliberately restrict it: the blue shape is a boundary the model's 
+          numbers aren't allowed to cross, forcing it to settle for a slightly-worse-but-safer fit inside the shape 
+          (marked with the arrow) instead of the unrestricted best fit. The shape of the 
+          boundary actually matters: because the diamond has sharp corners sitting right on the axes, the winning point 
+          often lands exactly on a corner, meaning one of the model's numbers gets pushed to exactly zero, effectively 
+          deciding that factor doesn't matter at all. The circle doesn't have corners, so it shrinks numbers down but 
+          rarely zeroes them out completely.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz4.png" target="_blank">Open Full Screen</a>
@@ -156,8 +173,12 @@
       <div class="viz-card">
         <img src="viz5.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
-    Fractals are shapes that don't have integer dimensions (fractional dimensions). Here is a fractal called a filled Julia set. 
-          The boundary and all points within (in red) converge rather than escaping to infinity.
+    Fractals are shapes that look "rough" or infinitely detailed no matter how far you zoom in. In other words, 
+          they don't have integer dimensions, but fractional ones. Regular shapes like circles and squares don't do this. 
+          This one is called a filled Julia set. To make it, you take a point, run it through a simple repeating math rule, 
+          and check what happens: does it wander off toward infinity, or does it stay trapped in a bounded region forever? 
+          The red points are the "trapped" ones. The wild, spiky boundary between red and blue is where the fractal 
+          detail lives. Zoom into that edge and you'll keep finding more detail <i>forever.</i>
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz5.png" target="_blank">Open Full Screen</a>
@@ -168,7 +189,9 @@
       <div class="viz-card">
         <img src="viz6.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
-    Filled Julia set of \(z=0.36+0.1i\), colored by number of iterations required to diverge.
+    Same Julia set, but the colors show how many iterations it took for a point to escape 
+          (rather than get trapped): blue means it escaped fast, red means it took a long 
+          time to decide, hovering near the boundary.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz6.png" target="_blank">Open Full Screen</a>
@@ -179,12 +202,13 @@
       <div class="viz-card">
         <img src="viz7.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
-    We all learned the quadratic method for finding roots of second-order polynomials. 
-          However, for higher-order or complex functions, iterative methods are required. For such methods, 
-          the closer an initial guess is to a root, the less iterations are required to converge. Pictured 
-          is Newton's Method on \(z^3-1\). The roots are found where the least amount of iterations are 
-          indicated (dark blue), agreeing with the known values of 
-          \((1,0i),(-0.5,\frac{\sqrt{3}}{2}i),(-0.5,-\frac{\sqrt{3}}{2}i)\).
+    This shows a technique (Newton's method) for finding the solution(s) to an equation by guessing, 
+          checking how close you are, 
+          then using that to make a better guess — repeating until you land on the answer. Here it's hunting 
+          for the 3 solutions to a specific equation. Every point on the image is a different starting guess, 
+          colored by how many guesses it took to converge to an answer. Dark blue = got there fast (great starting guess), 
+          other colors = took longer. The trippy swirling patterns show that even guesses very close to each other 
+          can take wildly different numbers of tries. Small changes in your starting point can lead to very different outcomes.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz7.png" target="_blank">Open Full Screen</a>
@@ -195,9 +219,11 @@
       <div class="viz-card">
         <img src="viz8.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
-    The Mandelbrot Set! My favorite fractal and the reason I decided to study math. 
-          Well, that and reading the book <i>Chaos</i> by James Gleick. Was beyond stoked when I learned to
-          make this in good ol' MATLAB.
+    The Mandelbrot Set! My favorite fractal, and the reason I decided to study math (that, and the book <i>Chaos</i> by James Gleick). 
+          Each point on this image represents one simple math rule being tested: repeat it over and over starting 
+          from zero, and see whether the results stay small and contained (navy) or blow up toward infinity 
+          (colors, showing how fast they blew up). Zoom into the edge and you'll find endless swirls, spirals, 
+          and even tiny copies of the whole shape. The same complexity at every scale, forever. Made in good ol' MATLAB.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz8.png" target="_blank">Open Full Screen</a>
