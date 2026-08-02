@@ -121,7 +121,7 @@
           range within which we expect the true population parameter to fall, based on a sample. <b>Standard
           deviation</b> measures the spread of data points around the mean. <b>Standard error</b> is the standard deviation of the
           <i>sample mean</i>. It estimates the variability of the sample mean from the true population mean. It decreases as the sample
-          size increases, unlike standard deviation which remains constant for a population.
+          size increases, unlike standard deviation which remains constant for a population. Made in Python.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz2.png" target="_blank">Open Full Screen</a>
@@ -139,7 +139,7 @@
           "downhill" from where it's standing and takes a step that way, then repeats. The red dots trace out the 
           path it took, step by step, as it settles into a valley (the low point of the function). This is basically 
           how machine learning models "learn." They're just walking downhill on some (much higher-dimensional) landscape, 
-          adjusting themselves a little at a time until they land somewhere good.
+          adjusting themselves a little at a time until they land somewhere that feels good.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz3.png" target="_blank">Open Full Screen</a>
@@ -174,7 +174,7 @@
         <img src="viz5.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
     Fractals are shapes that look "rough" or infinitely detailed no matter how far you zoom in. In other words, 
-          they don't have integer dimensions, but fractional ones. Regular shapes like circles and squares don't do this. 
+          they don't have integer dimensions, but <i>fractional</i> ones. Regular shapes like circles and squares don't do this. 
           This one is called a filled Julia set. To make it, you take a point, run it through a simple repeating math rule, 
           and check what happens: does it wander off toward infinity, or does it stay trapped in a bounded region forever? 
           The red points are the "trapped" ones. The wild, spiky boundary between red and blue is where the fractal 
@@ -219,11 +219,15 @@
       <div class="viz-card">
         <img src="viz8.png" style="width:100%; height:auto; border:1px solid #ccc;">
         <p style="margin-top:5px; font-size:0.95em; color:#555;">
-    The Mandelbrot Set! My favorite fractal, and the reason I decided to study math (that, and the book <i>Chaos</i> by James Gleick). 
+    The Mandelbrot set! My favorite fractal, and the reason I decided to study math (well, that and the book <i>Chaos</i> 
+          by James Gleick). 
           Each point on this image represents one simple math rule being tested: repeat it over and over starting 
           from zero, and see whether the results stay small and contained (navy) or blow up toward infinity 
           (colors, showing how fast they blew up). Zoom into the edge and you'll find endless swirls, spirals, 
-          and even tiny copies of the whole shape. The same complexity at every scale, forever. Made in good ol' MATLAB.
+          and even tiny copies of the whole shape. The same complexity at every scale, forever. The Mandelbrot set is 
+          sometimes called a "map of Julia sets," because 
+          for any value you pick from inside the Mandelbrot set, the corresponding Julia set will be one connected blob; for 
+          values outside it, the Julia set shatters into dust (disconnected points). Made in good ol' MATLAB.
         </p>
         <p style="text-align:center; margin-top:5px;">
           <a href="viz8.png" target="_blank">Open Full Screen</a>
